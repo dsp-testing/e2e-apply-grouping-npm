@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: react
+        versions: "> 18.2.0"
+      - dependency-name: redux
+        versions: "> 4.2.1"
+    groups:
+      react-redux:
+        applies-to: version-updates
+        patterns:
+          - react
+          - redux
